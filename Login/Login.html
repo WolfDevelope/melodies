@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Melodies - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-[#3d2a3f] to-[#2b192a] flex items-center justify-center">
+  <button onclick="window.history.back()" type="button" class="absolute top-6 left-6 z-40 flex items-center gap-2 bg-[#2d2240] hover:bg-pink-400 text-white px-4 py-2 rounded-lg shadow transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+    <span>Back</span>
+  </button>
+  <div class="w-full min-h-screen flex flex-col items-center justify-center">
+    <div class="w-full max-w-[420px] bg-[#39243a]/80 rounded-2xl shadow-2xl p-10 flex flex-col items-center">
+      <!-- Logo -->
+      <img src="./melodieslogo.png" alt="Melodies Logo" class="w-20 h-25 mb-20">
+      
+      <!-- Login Title -->
+      <h2 class="text-2xl font-bold text-white mb-8 text-center">Login To Continue</h2>
+      <form id="loginForm" class="w-full flex flex-col items-center">
+        <!-- Email Input -->
+        <input id="loginEmail" type="email" placeholder="E-Mail" class="w-full mb-4 px-5 py-3 rounded-lg bg-[#61235f]/60 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <!-- Password Input -->
+        <div class="w-full mb-2 relative">
+          <input id="loginPassword" type="password" placeholder="Password" class="w-full px-5 py-3 rounded-lg bg-[#61235f]/60 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-400">
+          <span class="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer text-pink-400">
+            <!-- Eye Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0zm-9 0c0 5 9 5 9 0s-9-5-9 0z" />
+            </svg>
+          </span>
+        </div>
+        <div class="w-full flex justify-between items-center mb-6">
+          <a href="#" class="text-white text-sm font-semibold hover:underline flex items-center gap-1">Forgot password <svg class="w-4 h-4 inline" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg></a>
+          <button type="submit" class="bg-pink-500 hover:bg-pink-600 text-white font-bold px-8 py-2 rounded-lg transition shadow">Login</button>
+        </div>
+      </form>
+      <!-- Social login buttons -->
+      <div class="flex w-full gap-4 mb-8">
+        <button class="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2 text-white hover:bg-gray-700 transition">
+          <img src="./google.png" alt="Google" class="w-5 h-5"> Google Login
+        </button>
+        <button class="flex-1 flex items-center justify-center gap-2 border border-gray-300 rounded-lg py-2 text-white hover:bg-gray-700 transition">
+          <img src="./facebook.png" alt="Facebook" class="w-5 h-5"> Facebook Login
+        </button>
+      </div>
+      <!-- Sign up -->
+      <div class="flex flex-row items-center justify-between w-full mt-2">
+        <div class="flex flex-col items-start">
+          <span class="text-white text-lg font-bold leading-tight">Don't Have An Account</span>
+          <span class="text-white text-base">Sign Up Here</span>
+        </div>
+        <a href="../Signup/Signup.html">
+          <button class="bg-sky-500 hover:bg-sky-600 text-white font-bold rounded-lg transition px-6 py-2 text-lg whitespace-nowrap">Sign Up</button>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="./login.js"></script>
+</body>
+</html>

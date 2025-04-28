@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Melodies - Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Splide CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+</head>
+<body class="bg-gradient-to-b from-[#22172b] to-[#3d2a3f] min-h-screen text-white font-sans">
+  <!-- Sidebar -->
+  <div class="flex" style="margin-left: 16rem;">
+    <aside class="w-64 bg-[#181a2a] flex flex-col py-6 px-4 fixed top-0 left-0 h-full z-30">
+      <div class="text-3xl font-extrabold bg-gradient-to-r from-pink-500 to-sky-400 bg-clip-text text-transparent mb-8">Melodies</div>
+       <nav class="flex  flex-col gap-2 text-white">
+       <!-- Menu group -->
+       <div class="mb-2">
+                   <div class="text-xs text-gray-400 mb-1">Menu</div>
+                   <a href="Home.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] border border-pink-400 font-semibold"><span>🏠</span> Home</a>
+                   <a href="Discover/Discover.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>🔍</span> Discover</a>
+                   <a href="Album/Album.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>💿</span> Albums</a>
+                   <a href="Artists/Artists.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>👤</span> Artists</a>
+                   </div>
+                   <!-- Library group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">Library</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>🕒</span> Recently Added</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>▶️</span> Most played</a>
+                   </div>
+                   <!-- Playlist and favorite group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">Playlist and favorite</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⭐</span> Your favorites</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>🎵</span> Your playlist</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span class="text-pink-400">＋</span> Add playlist</a>
+                   </div>
+                   <!-- General group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">General</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⚙️</span> Setting</a>
+                       <a href="Login/Login.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>></span> Login</a>
+                   </div> 
+               </nav>
+           </aside>
+  
+      <!-- Main Content -->
+      <main class="flex-1 px-8 py-6">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-6">
+          <input type="text" placeholder="Search for tracks, artists, albums..." class="rounded-lg px-4 py-2 bg-[#2d2240] text-white w-1/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
+          <nav class="flex items-center space-x-6">
+            <a href="#" class="hover:text-pink-300">About</a>
+            <a href="#" class="hover:text-pink-300">Contact</a>
+            <a href="#" class="hover:text-pink-300">Premium</a>
+            <a href="Login/Login.html">
+              <button class="bg-[#2d2240] text-white px-4 py-1 rounded-lg hover:bg-pink-400 hover:text-white">Login</button>
+            </a>
+            <a href="Signup/Signup.html">
+              <button class="bg-pink-400 text-white px-4 py-1 rounded-lg hover:bg-pink-500">Sign Up</button>
+            </a>
+          </nav>
+        </header>
+  
+        <!-- Billboard -->
+        <div class="relative flex justify-center items-center mb-8">
+          <!-- Splide Slider -->
+          <div id="billboardSplide" class="splide max-w-4xl mx-auto mb-8">
+            <div class="splide__track rounded-xl overflow-hidden h-72">
+              <ul class="splide__list">
+                <!-- Slide 1 -->
+                <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
+                  <img src="Home/billieilish.png" alt="Billie Eilish" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
+                  <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
+                    <h3 class="text-3xl font-bold mb-4">Billie eilish</h3>
+                    <p class="text-base mb-6">
+                      You can have easy access to every song of billie eilish by just clicking on the
+                      <span class="text-pink-400 font-medium">Listen now</span> botton. You can also
+                      <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.
+                    </p>
+                    <div class="flex space-x-4">
+                      <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
+                      <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- Slide 2 -->
+                <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
+                  <img src="Home/adele.jpg" alt="Adele" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
+                  <div class="relative z-10 flex flex-col justify-center h-full items-center w-full">
+                    <h3 class="text-3xl font-bold mb-4">Adele</h3>
+                    <p class="text-base mb-6 text-center text-gray-300">You can have easy access to every song of adele by just clicking on the
+                      <span class="text-pink-400 font-medium">Listen now</span> botton. You can also
+                      <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.</p>
+                    <div class="flex space-x-4">
+                      <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
+                      <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                    </div>
+                  </div>
+                </li>
+                <!-- Slide 3 -->
+                <li class="splide__slide flex items-center justify-center bg-[#2d2240] relative">
+                  <div class="relative z-10 flex flex-col justify-center h-full items-center w-full">
+                    <h3 class="text-3xl font-bold mb-4">Nghệ sĩ 3</h3>
+                    <p class="text-base mb-6 text-center text-gray-300">Thông tin nghệ sĩ 3...</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Weekly Top Songs -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">Weekly Top <span class="text-pink-400">Songs</span></h2>
+          <div class="flex space-x-4">
+            <!-- Example song card -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/weeklytopsongimage/Rectangle 17.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Whatever It Takes</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">ArtistImagne Dragons</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/weeklytopsongimage/Rectangle 19.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Sky Fall</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Adele</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/weeklytopsongimage/Rectangle 21.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Superman</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Eminiem</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/weeklytopsongimage/Rectangle 23.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Softcore</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">The neighberhood</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/weeklytopsongimage/Rectangle 25.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">The Lonliest</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Måneskin</span>
+            </div>
+            
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+            
+          </div>
+        </section>
+  
+        <!-- New Release Songs -->
+        <div class="new-release-section mb-8">
+          <h2 class="text-2xl font-bold mb-3">New Release <span class="text-pink-400">Songs</span></h2>
+          <div class="new-release-row flex space-x-4">
+            <!-- Example new release card -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/newreleasesongs/Rectangle 17.png" alt="Time by Luciano" class="release-img" />
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Time</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Luciano</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/newreleasesongs/Rectangle 19.png" alt="112 by jazzek" class="release-img" />
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">112</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">jazzek</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/newreleasesongs/Rectangle 21.png" alt="We don't care by Kyanu & Dj Gullum" class="release-img" />
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">We don't care</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Kyanu & Dj Gullum</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/newreleasesongs/Rectangle 23.png" alt="Who I Am by Alan Walker & Elias" class="release-img" />
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Who I Am</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">Alan Walker & Elias</span>
+            </div>
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/newreleasesongs/Rectangle 25.png" alt="Baixo by XXAnteria" class="release-img" />
+              <div class="flex flex-row items-center w-full justify-between mt-2">
+                <span class="text-sm font-semibold">Baixo</span>
+                <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+              </div>
+              <span class="text-xs text-gray-400 w-full text-left">XXAnteria</span>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Trending Songs Table -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">
+            Trending <span class="text-pink-400">Songs</span>
+          </h2>
+          <div class="bg-[#2d2240] rounded-xl overflow-hidden">
+            <div class="flex font-semibold text-white text-base px-4 py-3">
+              <div class="w-16">#</div>
+              <div class="flex-1">Title</div>
+              <div class="w-40">Release Date</div>
+              <div class="flex-1">Album</div>
+              <div class="w-24 text-right">Time</div>
+            </div>
+            <!-- Song Row 1 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #1
+                <!-- IMAGE HERE -->
+                <div class="">
+                  <img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 1.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Sorfcore</div>
+                <div class="text-xs text-gray-300">The neighborhood</div>
+              </div>
+              <div class="w-40 text-white">Nov 4, 2023</div>
+              <div class="flex-1 text-white">Hard to Imagine the Neighbourhood Ever Changing</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">3:26</span>
+              </div>
+            </div>
+            <!-- Song Row 2 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #2
+                <!-- IMAGE HERE -->
+                <div class="">
+                  <img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 2.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Skyfall Beats</div>
+                <div class="text-xs text-gray-300">nightmares</div>
+              </div>
+              <div class="w-40 text-white">Oct 26, 2023</div>
+              <div class="flex-1 text-white">nightmares</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">2:45</span>
+              </div>
+            </div>
+            <!-- Song Row 3 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #3
+                <!-- IMAGE HERE -->
+                <div class="">
+                  <img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 3.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Greedy</div>
+                <div class="text-xs text-gray-300">tate mcrae</div>
+              </div>
+              <div class="w-40 text-white">Dec 30, 2023</div>
+              <div class="flex-1 text-white">Greedy</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">2:11</span>
+              </div>
+            </div>
+            <!-- Song Row 4 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #4
+                <!-- IMAGE HERE -->
+                <div class=""><img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 4.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Lovin On me</div>
+                <div class="text-xs text-gray-300">jack harlow</div>
+              </div>
+              <div class="w-40 text-white">Dec 30, 2023</div>
+              <div class="flex-1 text-white">Lovin On me</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">2:18</span>
+              </div>
+            </div>
+            <!-- Song Row 5 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #5
+                <!-- IMAGE HERE -->
+                <div class=""><img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 5.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">pain the town red</div>
+                <div class="text-xs text-gray-300">Doja Cat</div>
+              </div>
+              <div class="w-40 text-white">Dec 29, 2023</div>
+              <div class="flex-1 text-white">Paint The Town Red</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">3:51</span>
+              </div>
+            </div>
+            <!-- Song Row 6 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #6
+                <!-- IMAGE HERE -->
+                <div class=""><img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 6.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Dancin On Night</div>
+                <div class="text-xs text-gray-300">Dualipa</div>
+              </div>
+              <div class="w-40 text-white">may 27, 2023</div>
+              <div class="flex-1 text-white">Dance The Night(From Barbie Movie)</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">2:56</span>
+              </div>
+            </div>
+            <!-- Song Row 7 -->
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+              <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
+                #7
+                <!-- IMAGE HERE -->
+                <div class=""><img src="Home/TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 7.png" alt="Time by Luciano" class="release-img" />
+                </div>
+              </div>
+              <div class="flex-1">
+                <div class="text-white font-semibold">Water</div>
+                <div class="text-xs text-gray-300">Tyla</div>
+              </div>
+              <div class="w-40 text-white">Dec 10, 2023</div>
+              <div class="flex-1 text-white">Water</div>
+              <div class="w-24 flex items-center justify-end">
+                <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+                <span class="text-white">3:20</span>
+              </div>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="flex items-center gap-2 bg-[#232323] hover:bg-pink-500 text-white font-semibold text-lg px-7 py-2 rounded-md shadow transition-all">
+                <span class="text-2xl font-bold">+</span>
+                <span>View All</span>
+              </button>
+              <span class="text-white font-semibold text-base"></span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Popular Artists -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">Popular <span class="text-pink-400">Artists</span></h2>
+          <div class="flex items-center space-x-8">
+            <!-- Artist 1 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 2.png" alt="Eminem" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Eminem</span>
+            </div>
+            <!-- Artist 2 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 3.png" alt="Imagine Dragons" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Imagine Dragons</span>
+            </div>
+            <!-- Artist 3 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 4.png" alt="Adele" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Adele</span>
+            </div>
+            <!-- Artist 4 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 5.png" alt="Lana Del Rey" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Lana Del Rey</span>
+            </div>
+            <!-- Artist 5 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 6.png" alt="Harry Styles" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Harry Styles</span>
+            </div>
+            <!-- Artist 6 -->
+            <div class="flex flex-col items-center">
+              <img src="Home/PopularArtists/69824 7.png" alt="Billie Eilish" class="rounded-full w-32 h-32 object-cover">
+              <span class="text-lg font-semibold text-white mt-3">Billie Eilish</span>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Music Video -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">Music <span class="text-pink-400">Video</span></h2>
+          <div class="flex items-center space-x-8">
+            <!-- Video 1 -->
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+              <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
+                <img src="Home/Musicvideo/Rectangle 35.png" alt="Gossip" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="text-xl font-semibold text-white mb-1">Gossip</div>
+                <div class="flex justify-between items-center text-sm text-gray-300">
+                  <span>Måneskin</span>
+                  <span>231K views</span>
+                </div>
+              </div>
+            </div>
+            <!-- Video 2 -->
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+              <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
+                <img src="Home/Musicvideo/Rectangle 35 (1).png" alt="Shape Of You" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="text-xl font-semibold text-white mb-1">Shape Of You</div>
+                <div class="flex justify-between items-center text-sm text-gray-300">
+                  <span>Ed Sheeran</span>
+                  <span>5M views</span>
+                </div>
+              </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+              <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
+                <img src="Home/Musicvideo/Rectangle 35 (2).png" alt="Someone Like You" class="w-full h-full object-cover">
+              </div>
+              <div class="p-4">
+                <div class="text-xl font-semibold text-white mb-1">Someone Like You</div>
+                <div class="flex justify-between items-center text-sm text-gray-300">
+                  <span>Adele</span>
+                  <span>3M views</span>
+                </div>
+              </div>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Top Albums -->
+          <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">
+            Top <span class="text-blue-400">Albums</span>
+          </h2> 
+          <div class="flex space-x-4 items-end items-center">
+            <!-- Album Card 1 -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+              <div class="w-full flex flex-col items-center">
+                <img src="Home/Topalbum/Rectangle 17.png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
+                <span class="text-base font-semibold text-white text-center line-clamp-2">Adele 21</span>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                <span class="text-xs text-gray-300 text-center">Adele</span>
+                <span class="mt-1">
+                  <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2"/></svg>
+                </span>
+              </div>
+            </div>
+            <!-- Album Card 2 -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+              <div class="w-full flex flex-col items-center">
+                <img src="Home/Topalbum/Rectangle 17 (1).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
+                <span class="text-base font-semibold text-white text-center line-clamp-2">Beauty Behind the Madness 21</span>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                <span class="text-xs text-gray-300 text-center">The Weeknd</span>
+                <span class="mt-1">
+                  <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2"/></svg>
+                </span>
+              </div>
+            </div>
+            <!-- Album Card 3 -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+              <div class="w-full flex flex-col items-center">
+                <img src="Home/Topalbum/Rectangle 17 (2).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
+                <span class="text-base font-semibold text-white text-center line-clamp-2">Scorpion</span>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                <span class="text-xs text-gray-300 text-center">Drake</span>
+                <span class="mt-1">
+                  <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2"/></svg>
+                </span>
+              </div>
+            </div>
+            <!-- Album Card 4 -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+              <div class="w-full flex flex-col items-center">
+                <img src="Home/Topalbum/Rectangle 17 (3).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
+                <span class="text-base font-semibold text-white text-center line-clamp-2">Harry's House</span>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                <span class="text-xs text-gray-300 text-center">Harry Styles</span>
+                <span class="mt-1">
+                  <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2"/></svg>
+                </span>
+              </div>
+            </div>
+            <!-- Album Card 5 -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+              <div class="w-full flex flex-col items-center">
+                <img src="Home/Topalbum/Rectangle 17 (4).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
+                <span class="text-base font-semibold text-white text-center line-clamp-2">Born To Die</span>
+              </div>
+              <div class="w-full flex justify-between items-center">
+                <span class="text-xs text-gray-300 text-center">Lana Del Rey</span>
+                <span class="mt-1">
+                  <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><circle cx="10" cy="10" r="2"/></svg>
+                </span>
+              </div>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Mood Playlists -->
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-3">
+            <span class="">Mood</span> <span class="text-pink-400 ">Playlists</span>
+          </h2>
+          <div class="flex space-x-4 items-center">
+            <!-- Sad Songs -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/MoodPlaylists/Rectangle 17.png" class="">
+              <span class="text-white text-base font-semibold">Sad Songs</span>
+              <span class="text-xs text-gray-300 mt-1">Sad Playlist</span>
+            </div>
+            <!-- Chill Songs -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/MoodPlaylists/Rectangle 17 (1).png" class="">
+              <span class="text-white text-base font-semibold">Chill Songs</span>
+              <span class="text-xs text-gray-300 mt-1">Chill Playlist</span>
+            </div>
+            <!-- Workout Songs -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/MoodPlaylists/Rectangle 17 (2).png" class="">
+              <span class="text-white text-base font-semibold">Workout Songs</span>
+              <span class="text-xs text-gray-300 mt-1">Workout Songs</span>
+            </div>
+            <!-- Love Songs -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/MoodPlaylists/Rectangle 17 (3).png" class="">
+              <span class="text-white text-base font-semibold">Love songs</span>
+              <span class="text-xs text-gray-300 mt-1">Love Playlist</span>
+            </div>
+            <!-- Happy Songs -->
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+              <img src="Home/MoodPlaylists/Rectangle 17 (4).png" class="">
+              <span class="text-white text-base font-semibold">Happy Songs</span>
+              <span class="text-xs text-gray-300 mt-1">Happy Songs</span>
+            </div>
+            <!-- View All Button -->
+            <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+              <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                  <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+                </svg>
+              </button>
+              <span class="text-white font-semibold text-base">View All</span>
+            </div>
+          </div>
+        </section>
+  
+       <!-- Join Platform -->
+        <section class="mb-8 flex items-center justify-between">
+          <div class="w-3/5">
+            <h2 class="text-3xl font-extrabold text-white mb-3">Join Our Platform</h2>
+            <p class="text-lg font-bold text-white mb-6">
+              You can be one of the <span class="text-pink-400">members</span> of our platform by just adding some necessarily information. If you already have an account on our website, you can just hit the <a href="#" class="text-sky-400 underline font-bold">Login button.</a>
+            </p>
+          </div>
+          <div class="flex gap-8 min-w-[500px] justify-end">
+            <button class="flex-1 px-0 py-0 h-16 w-60 rounded-xl text-2xl font-bold text-white bg-pink-500  hover:bg-pink-600 transition-all outline-none focus:ring-2 focus:ring-pink-400">
+              Sign Up
+            </button>
+            <button class="flex-1 px-0 py-0 h-16 w-60 rounded-xl text-2xl font-bold text-pink-400 bg-[#232025] hover:text-pink-200 transition-all">
+              Login
+            </button>
+          </div>
+        </section>
+  
+        <!-- Footer -->
+        <footer class="bg-[#432f3c] w-full p-10 text-white mt-8 text-base">
+          <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-start gap-8">
+            <!-- About -->
+            <div class="flex-1 min-w-[260px] max-w-[350px]">
+              <h2 class="text-3xl font-extrabold mb-2">About</h2>
+              <p class="font-semibold mb-2 text-gray-100">
+                Melodies is a website that has been created for over 
+                <span class="text-pink-400">5 year's</span> now and it is one of the most famous music player website’s in the world. in this website you can listen and download songs for free. also of you want no limitation you can buy our 
+                <a class="text-sky-400 underline font-bold" href="#">premium pass's.</a>
+              </p>
+            </div>
+            <!-- Melodi -->
+            <div class="flex-1 min-w-[150px]">
+              <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Melodi</h3>
+              <ul class="mt-2 space-y-1 font-bold">
+                <li>Songs</li>
+                <li>Radio</li>
+                <li>Podcast</li>
+              </ul>
+            </div>
+            <!-- Access -->
+            <div class="flex-1 min-w-[180px]">
+              <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Access</h3>
+              <ul class="mt-2 space-y-1 font-bold">
+                <li>Explor</li>
+                <li>Artists</li>
+                <li>Playlists</li>
+                <li>Albums</li>
+                <li>Trending</li>
+              </ul>
+            </div>
+            <!-- Contact -->
+            <div class="flex-1 min-w-[180px]">
+              <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Contact</h3>
+              <ul class="mt-2 space-y-1 font-bold">
+                <li>About</li>
+                <li>Policy</li>
+                <li>Social Media</li>
+                <li>Soppurt</li>
+              </ul>
+            </div>
+            <!-- Logo -->
+            <div class="flex flex-col justify-between">
+              <div class="flex items-center min-w-[160px]">
+              <span class="text-3xl font-extrabold bg-gradient-to-r from-pink-500 to-sky-400 bg-clip-text text-transparent">Melodies</span>
+              </div>  
+            
+              <div class="flex gap-3 mt-4 text-2xl">
+                <!-- Replace these with FontAwesome or your icon set -->
+                 <img src="Home/Logo/fluent_call-28-regular.png" class="inline-block w-8 h-8  flex items-center justify-center">
+                 <img src="Home/Logo/Group.png" class="inline-block w-8 h-8 flex items-center justify-center">
+                 <img src="Home/Logo/streamline_computer-logo-twitter-media-twitter-social.png" class="inline-block w-8 h-8 flex items-center justify-center">
+                 <img src="Home/Logo/Vector.png" class="inline-block w-8 h-8 flex items-center justify-center">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+       </footer>
+      </main>
+    </div>
+    <!-- Splide JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <style>
+      #billboardSplide .splide__arrow {
+        background: #23172b;
+        color: #ff69b4;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 9999px;
+        box-shadow: 0 2px 8px #0003;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        transition: background 0.2s, color 0.2s;
+      }
+      #billboardSplide .splide__arrow--prev {
+        left: -3.5rem; /* Dịch ra ngoài bên trái */
+      }
+      #billboardSplide .splide__arrow--next {
+        right: -3.5rem; /* Dịch ra ngoài bên phải */
+      }
+      #billboardSplide .splide__arrow:hover {
+        background: #ff69b4;
+        color: #fff;
+      }
+      /* Đảm bảo slide tràn sát mép track, không lộ slide bên cạnh */
+      #billboardSplide .splide__slide {
+        width: 100% !important;
+        margin: 0 !important;
+      }
+      #billboardSplide .splide__track {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var splide = new Splide('#billboardSplide', {
+        type   : 'loop',
+        padding: 0, // Xóa padding hai bên
+      });
+      splide.mount();
+    });
+    </script>
+  </body>
+</html>
