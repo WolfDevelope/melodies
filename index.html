@@ -49,7 +49,7 @@
       <main class="flex-1 px-8 py-6">
         <!-- Header -->
         <header class="flex justify-between items-center mb-6">
-          <input type="text" placeholder="Search for tracks, artists, albums..." class="rounded-lg px-4 py-2 bg-[#2d2240] text-white w-1/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
+          <input id="searchInput" type="text" placeholder="Search for tracks, artists, albums..." class="rounded-lg px-4 py-2 bg-[#2d2240] text-white w-1/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
           <nav class="flex items-center space-x-6">
             <a href="#" class="hover:text-pink-300">About</a>
             <a href="#" class="hover:text-pink-300">Contact</a>
@@ -71,7 +71,7 @@
               <ul class="splide__list">
                 <!-- Slide 1 -->
                 <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
-                  <img src="Home/billieilish.png" alt="Billie Eilish" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+                  <img src="Home/billie-eilish.jpg" alt="Billie Eilish" class="absolute inset-0 w-full h-full object-cover opacity-70" />
                   <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
                   <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
                     <h3 class="text-3xl font-bold mb-4">Billie eilish</h3>
@@ -81,8 +81,12 @@
                       <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.
                     </p>
                     <div class="flex space-x-4">
-                      <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
-                      <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                      <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ">
+                        <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCiGm_E4ZwYSHV3bcW1pnSeQ">
+                        <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                      </a>
                     </div>
                   </div>
                 </li>
@@ -90,22 +94,42 @@
                 <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
                   <img src="Home/adele.jpg" alt="Adele" class="absolute inset-0 w-full h-full object-cover opacity-70" />
                   <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
-                  <div class="relative z-10 flex flex-col justify-center h-full items-center w-full">
+                  <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
                     <h3 class="text-3xl font-bold mb-4">Adele</h3>
-                    <p class="text-base mb-6 text-center text-gray-300">You can have easy access to every song of adele by just clicking on the
+                    <p class="text-base mb-6">
+                      You can have easy access to every song of adele by just clicking on the
                       <span class="text-pink-400 font-medium">Listen now</span> botton. You can also
-                      <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.</p>
+                      <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.
+                    </p>
                     <div class="flex space-x-4">
-                      <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
-                      <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                      <a href="https://www.youtube.com/channel/UCsRM0YB_dabtEPGPTKo-gcw">
+                        <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
+                      </a>
+                      <a href="https://www.youtube.com/channel/UCsRM0YB_dabtEPGPTKo-gcw">
+                        <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                      </a>
                     </div>
                   </div>
                 </li>
                 <!-- Slide 3 -->
-                <li class="splide__slide flex items-center justify-center bg-[#2d2240] relative">
-                  <div class="relative z-10 flex flex-col justify-center h-full items-center w-full">
-                    <h3 class="text-3xl font-bold mb-4">Nghệ sĩ 3</h3>
-                    <p class="text-base mb-6 text-center text-gray-300">Thông tin nghệ sĩ 3...</p>
+                <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
+                  <img src="Home/dua lipa.jpg" alt="Dua Lipa" class="absolute inset-0 w-full h-full object-cover opacity-70" />
+                  <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
+                  <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
+                    <h3 class="text-3xl font-bold mb-4">Dua Lipa</h3>
+                    <p class="text-base mb-6">
+                      You can have easy access to every song of dua lipa by just clicking on the
+                      <span class="text-pink-400 font-medium">Listen now</span> botton. You can also
+                      <span class="text-cyan-400 font-medium">follow</span> her too for supporting her and keeping it up with what she does.
+                    </p>
+                    <div class="flex space-x-4">
+                      <a href="https://www.youtube.com/channel/UC-J-KZfRV8c13fOCkhXdLiQ">
+                        <button class="border-2 border-pink-400 text-pink-400 px-6 py-2 rounded-xl font-semibold hover:bg-pink-400 hover:text-white transition">Listen Now</button>
+                      </a>
+                      <a href="https://www.youtube.com/channel/UC-J-KZfRV8c13fOCkhXdLiQ">
+                        <button class="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-xl font-semibold hover:bg-cyan-400 hover:text-white transition">Follow</button>
+                      </a>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -119,7 +143,7 @@
           <h2 class="text-2xl font-bold mb-3">Weekly Top <span class="text-pink-400">Songs</span></h2>
           <div class="flex space-x-4">
             <!-- Example song card -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/weeklytopsongimage/Rectangle 17.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Whatever It Takes</span>
@@ -127,7 +151,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">ArtistImagne Dragons</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/weeklytopsongimage/Rectangle 19.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Sky Fall</span>
@@ -135,7 +159,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">Adele</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/weeklytopsongimage/Rectangle 21.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Superman</span>
@@ -143,7 +167,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">Eminiem</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/weeklytopsongimage/Rectangle 23.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Softcore</span>
@@ -151,7 +175,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">The neighberhood</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/weeklytopsongimage/Rectangle 25.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">The Lonliest</span>
@@ -178,7 +202,7 @@
           <h2 class="text-2xl font-bold mb-3">New Release <span class="text-pink-400">Songs</span></h2>
           <div class="new-release-row flex space-x-4">
             <!-- Example new release card -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/newreleasesongs/Rectangle 17.png" alt="Time by Luciano" class="release-img" />
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Time</span>
@@ -186,7 +210,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">Luciano</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/newreleasesongs/Rectangle 19.png" alt="112 by jazzek" class="release-img" />
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">112</span>
@@ -194,7 +218,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">jazzek</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/newreleasesongs/Rectangle 21.png" alt="We don't care by Kyanu & Dj Gullum" class="release-img" />
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">We don't care</span>
@@ -202,7 +226,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">Kyanu & Dj Gullum</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/newreleasesongs/Rectangle 23.png" alt="Who I Am by Alan Walker & Elias" class="release-img" />
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Who I Am</span>
@@ -210,7 +234,7 @@
               </div>
               <span class="text-xs text-gray-400 w-full text-left">Alan Walker & Elias</span>
             </div>
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/newreleasesongs/Rectangle 25.png" alt="Baixo by XXAnteria" class="release-img" />
               <div class="flex flex-row items-center w-full justify-between mt-2">
                 <span class="text-sm font-semibold">Baixo</span>
@@ -243,7 +267,7 @@
               <div class="w-24 text-right">Time</div>
             </div>
             <!-- Song Row 1 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #1
                 <!-- IMAGE HERE -->
@@ -263,7 +287,7 @@
               </div>
             </div>
             <!-- Song Row 2 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #2
                 <!-- IMAGE HERE -->
@@ -283,7 +307,7 @@
               </div>
             </div>
             <!-- Song Row 3 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #3
                 <!-- IMAGE HERE -->
@@ -303,7 +327,7 @@
               </div>
             </div>
             <!-- Song Row 4 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #4
                 <!-- IMAGE HERE -->
@@ -322,7 +346,7 @@
               </div>
             </div>
             <!-- Song Row 5 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #5
                 <!-- IMAGE HERE -->
@@ -341,7 +365,7 @@
               </div>
             </div>
             <!-- Song Row 6 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #6
                 <!-- IMAGE HERE -->
@@ -360,7 +384,7 @@
               </div>
             </div>
             <!-- Song Row 7 -->
-            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2">
+            <div class="flex gap-2 items-center border-b border-[#3d2a3f] hover:bg-[#3d2a3f] px-4 py-2 search-item">
               <div class="w-16 flex gap-2 items-center font-bold text-white text-lg">
                 #7
                 <!-- IMAGE HERE -->
@@ -394,32 +418,32 @@
           <h2 class="text-2xl font-bold mb-3">Popular <span class="text-pink-400">Artists</span></h2>
           <div class="flex items-center space-x-8">
             <!-- Artist 1 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 2.png" alt="Eminem" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Eminem</span>
             </div>
             <!-- Artist 2 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 3.png" alt="Imagine Dragons" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Imagine Dragons</span>
             </div>
             <!-- Artist 3 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 4.png" alt="Adele" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Adele</span>
             </div>
             <!-- Artist 4 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 5.png" alt="Lana Del Rey" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Lana Del Rey</span>
             </div>
             <!-- Artist 5 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 6.png" alt="Harry Styles" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Harry Styles</span>
             </div>
             <!-- Artist 6 -->
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center search-item">
               <img src="Home/PopularArtists/69824 7.png" alt="Billie Eilish" class="rounded-full w-32 h-32 object-cover">
               <span class="text-lg font-semibold text-white mt-3">Billie Eilish</span>
             </div>
@@ -440,7 +464,7 @@
           <h2 class="text-2xl font-bold mb-3">Music <span class="text-pink-400">Video</span></h2>
           <div class="flex items-center space-x-8">
             <!-- Video 1 -->
-            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80 search-item">
               <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
                 <img src="Home/Musicvideo/Rectangle 35.png" alt="Gossip" class="w-full h-full object-cover">
               </div>
@@ -453,7 +477,7 @@
               </div>
             </div>
             <!-- Video 2 -->
-            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80 search-item">
               <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
                 <img src="Home/Musicvideo/Rectangle 35 (1).png" alt="Shape Of You" class="w-full h-full object-cover">
               </div>
@@ -466,7 +490,7 @@
               </div>
             </div>
             <!-- Video 3 -->
-            <div class="bg-[#232026] rounded-xl overflow-hidden w-80">
+            <div class="bg-[#232026] rounded-xl overflow-hidden w-80 search-item">
               <div class="h-44 w-full bg-gray-700 flex items-center justify-center">
                 <img src="Home/Musicvideo/Rectangle 35 (2).png" alt="Someone Like You" class="w-full h-full object-cover">
               </div>
@@ -497,7 +521,7 @@
           </h2> 
           <div class="flex space-x-4 items-end items-center">
             <!-- Album Card 1 -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden search-item">
               <div class="w-full flex flex-col items-center">
                 <img src="Home/Topalbum/Rectangle 17.png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
                 <span class="text-base font-semibold text-white text-center line-clamp-2">Adele 21</span>
@@ -510,7 +534,7 @@
               </div>
             </div>
             <!-- Album Card 2 -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden search-item">
               <div class="w-full flex flex-col items-center">
                 <img src="Home/Topalbum/Rectangle 17 (1).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
                 <span class="text-base font-semibold text-white text-center line-clamp-2">Beauty Behind the Madness 21</span>
@@ -523,7 +547,7 @@
               </div>
             </div>
             <!-- Album Card 3 -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden search-item">
               <div class="w-full flex flex-col items-center">
                 <img src="Home/Topalbum/Rectangle 17 (2).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
                 <span class="text-base font-semibold text-white text-center line-clamp-2">Scorpion</span>
@@ -536,7 +560,7 @@
               </div>
             </div>
             <!-- Album Card 4 -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden search-item">
               <div class="w-full flex flex-col items-center">
                 <img src="Home/Topalbum/Rectangle 17 (3).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
                 <span class="text-base font-semibold text-white text-center line-clamp-2">Harry's House</span>
@@ -549,7 +573,7 @@
               </div>
             </div>
             <!-- Album Card 5 -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 h-60 flex flex-col justify-between items-center overflow-hidden search-item">
               <div class="w-full flex flex-col items-center">
                 <img src="Home/Topalbum/Rectangle 17 (4).png" alt="Album" class="rounded-lg mb-2 w-32 h-32 object-cover bg-gray-700">
                 <span class="text-base font-semibold text-white text-center line-clamp-2">Born To Die</span>
@@ -580,31 +604,31 @@
           </h2>
           <div class="flex space-x-4 items-center">
             <!-- Sad Songs -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/MoodPlaylists/Rectangle 17.png" class="">
               <span class="text-white text-base font-semibold">Sad Songs</span>
               <span class="text-xs text-gray-300 mt-1">Sad Playlist</span>
             </div>
             <!-- Chill Songs -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/MoodPlaylists/Rectangle 17 (1).png" class="">
               <span class="text-white text-base font-semibold">Chill Songs</span>
               <span class="text-xs text-gray-300 mt-1">Chill Playlist</span>
             </div>
             <!-- Workout Songs -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/MoodPlaylists/Rectangle 17 (2).png" class="">
               <span class="text-white text-base font-semibold">Workout Songs</span>
               <span class="text-xs text-gray-300 mt-1">Workout Songs</span>
             </div>
             <!-- Love Songs -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/MoodPlaylists/Rectangle 17 (3).png" class="">
               <span class="text-white text-base font-semibold">Love songs</span>
               <span class="text-xs text-gray-300 mt-1">Love Playlist</span>
             </div>
             <!-- Happy Songs -->
-            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
+            <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center search-item">
               <img src="Home/MoodPlaylists/Rectangle 17 (4).png" class="">
               <span class="text-white text-base font-semibold">Happy Songs</span>
               <span class="text-xs text-gray-300 mt-1">Happy Songs</span>
@@ -622,20 +646,24 @@
         </section>
   
        <!-- Join Platform -->
-        <section class="mb-8 flex items-center justify-between">
+        <section class="mb-8 flex gap-2 items-center justify-between">
           <div class="w-3/5">
             <h2 class="text-3xl font-extrabold text-white mb-3">Join Our Platform</h2>
             <p class="text-lg font-bold text-white mb-6">
               You can be one of the <span class="text-pink-400">members</span> of our platform by just adding some necessarily information. If you already have an account on our website, you can just hit the <a href="#" class="text-sky-400 underline font-bold">Login button.</a>
             </p>
           </div>
-          <div class="flex gap-8 min-w-[500px] justify-end">
+          <div class="flex gap-4 min-w-[500px] justify-end">
+            <a href="../Signup/Signup.html">
             <button class="flex-1 px-0 py-0 h-16 w-60 rounded-xl text-2xl font-bold text-white bg-pink-500  hover:bg-pink-600 transition-all outline-none focus:ring-2 focus:ring-pink-400">
               Sign Up
             </button>
+            </a>
+            <a href="../Login/Login.html">
             <button class="flex-1 px-0 py-0 h-16 w-60 rounded-xl text-2xl font-bold text-pink-400 bg-[#232025] hover:text-pink-200 transition-all">
               Login
             </button>
+            </a>
           </div>
         </section>
   
@@ -703,47 +731,6 @@
     </div>
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <style>
-      #billboardSplide .splide__arrow {
-        background: #23172b;
-        color: #ff69b4;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 9999px;
-        box-shadow: 0 2px 8px #0003;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        transition: background 0.2s, color 0.2s;
-      }
-      #billboardSplide .splide__arrow--prev {
-        left: -3.5rem; /* Dịch ra ngoài bên trái */
-      }
-      #billboardSplide .splide__arrow--next {
-        right: -3.5rem; /* Dịch ra ngoài bên phải */
-      }
-      #billboardSplide .splide__arrow:hover {
-        background: #ff69b4;
-        color: #fff;
-      }
-      /* Đảm bảo slide tràn sát mép track, không lộ slide bên cạnh */
-      #billboardSplide .splide__slide {
-        width: 100% !important;
-        margin: 0 !important;
-      }
-      #billboardSplide .splide__track {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-    </style>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var splide = new Splide('#billboardSplide', {
-        type   : 'loop',
-        padding: 0, // Xóa padding hai bên
-      });
-      splide.mount();
-    });
-    </script>
+    <script src="Home/Home.js"></script>
   </body>
 </html>

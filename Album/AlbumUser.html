@@ -19,6 +19,13 @@
   </style>
 </head>
 <body class="bg-gradient-to-b from-[#22172b] to-[#3d2a3f] min-h-screen text-white font-sans">
+  <script>
+    // Kiểm tra trạng thái đăng nhập
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      window.location.href = '../Login/Login.html';
+    }
+  </script>
   <!-- Sidebar -->
   <div class="flex" style="margin-left: 16rem;">
     <aside class="w-64 bg-[#181a2a] flex flex-col py-6 px-4 fixed top-0 left-0 h-full z-30">
@@ -27,10 +34,10 @@
        <!-- Menu group -->
        <div class="mb-2">
                    <div class="text-xs text-gray-400 mb-1">Menu</div>
-                   <a href="../index.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  font-semibold"><span>🏠</span> Home</a>
-                   <a href="../Discover/Discover.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>🔍</span> Discover</a>
-                   <a href="../Album/Album.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] border border-pink-400font-semibold"><span>💿</span> Albums</a>
-                   <a href="../Artists/Artists.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>👤</span> Artists</a>
+                   <a href="../Home/HomeUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  font-semibold"><span>🏠</span> Home</a>
+                   <a href="../Discover/DiscoverUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>🔍</span> Discover</a>
+                   <a href="../Album/AlbumUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] border border-pink-400font-semibold"><span>💿</span> Albums</a>
+                   <a href="../Artists/ArtistsUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>👤</span> Artists</a>
                    </div>
                    <!-- Library group -->
                    <div class="mb-2">
@@ -49,7 +56,8 @@
                    <div class="mb-2">
                        <div class="text-xs text-gray-400 mb-1">General</div>
                        <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⚙️</span> Setting</a>
-                       <a href="../Login/Login.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>></span> Login</a>
+                       <!-- Nút logout -->
+                       <button onclick="localStorage.removeItem('currentUser'); window.location.href='../index.html';" class="flex items-center gap-2 py-2 px-3 rounded-lg text-pink-400 hover:bg-[#2d2240] w-full text-left"><span>⏻</span> Logout</button>
                    </div> 
                </nav>
            </aside>
@@ -61,7 +69,7 @@
     
       <div class="flex justify-between items-center mb-4">
        <!-- Back Arrow -->
-        <a href="../index.html" class="mr-4 mt-1">
+        <a href="../Home/HomeUser.html" class="mr-4 mt-1">
          <button>
           <svg xmlns="[http://www.w3.org/2000/svg"](http://www.w3.org/2000/svg") class="w-8 h-8 text-white hover:text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
@@ -75,7 +83,7 @@
             <a href="#" class="hover:text-pink-400">About</a>
             <a href="#" class="hover:text-pink-400">Premium</a>
             <span class="inline-block">
-              <a href="../Login/Login.html" >
+              <a href="../Account/Account.html" >
                 <img src="./iconamoon_profile-circle-fill.png" class="w-6 h-6 hover:bg-pink-400 rounded-full ">
               </a>
           </span>

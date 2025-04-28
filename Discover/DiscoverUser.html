@@ -2,13 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Melodies - Discover</title>
+  <title>Melodies - Discover (User)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
  <body class="bg-gradient-to-b from-[#22172b] to-[#3d2a3f] min-h-screen text-white font-sans">
-    <!-- Sidebar -->
+  <script>
+    // Kiểm tra trạng thái đăng nhập
+    const currentUser = localStorage.getItem('currentUser');
+    if (!currentUser) {
+      window.location.href = '../Login/Login.html';
+    }
+  </script>
+  <!-- Sidebar -->
     <div class="flex" style="margin-left: 16rem;">
       <aside class="w-64 bg-[#181a2a] flex flex-col py-6 px-4 fixed top-0 left-0 h-full z-30">
       <div class="text-3xl font-extrabold bg-gradient-to-r from-pink-500 to-sky-400 bg-clip-text text-transparent mb-8">Melodies</div>
@@ -16,10 +23,10 @@
        <!-- Menu group -->
        <div class="mb-2">
                    <div class="text-xs text-gray-400 mb-1">Menu</div>
-                   <a href="../index.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  font-semibold"><span>🏠</span> Home</a>
-                   <a href="../Discover/Discover.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] border border-pink-400font-semibold"><span>🔍</span> Discover</a>
-                   <a href="../Album/Album.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>💿</span> Albums</a>
-                   <a href="../Artists/Artists.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>👤</span> Artists</a>
+                   <a href="../Home/HomeUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  font-semibold"><span>🏠</span> Home</a>
+                   <a href="../Discover/DiscoverUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] border border-pink-400font-semibold"><span>🔍</span> Discover</a>
+                   <a href="../Album/AlbumUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>💿</span> Albums</a>
+                   <a href="../Artists/ArtistsUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>👤</span> Artists</a>
                    </div>
                    <!-- Library group -->
                    <div class="mb-2">
@@ -38,28 +45,32 @@
                    <div class="mb-2">
                        <div class="text-xs text-gray-400 mb-1">General</div>
                        <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⚙️</span> Setting</a>
-                       <a href="../Login/Login.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>></span> Login</a>
+                       <!-- Nút logout -->
+                       <button onclick="localStorage.removeItem('currentUser'); window.location.href='./discover.html';" class="flex items-center gap-2 py-2 px-3 rounded-lg text-pink-400 hover:bg-[#2d2240] w-full text-left"><span>⏻</span> Logout</button>
                    </div> 
                </nav>
            </aside>
   
       <!-- Main Content -->
       <main class="flex-1 px-8 py-6">
-        <!-- Header -->
-        <header class="flex justify-between items-center mb-6">
-          <input id="searchInput" type="text" placeholder="Search for tracks, artists, albums..." class="rounded-lg px-4 py-2 bg-[#2d2240] text-white w-1/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
-          <nav class="flex items-center space-x-6">
-            <a href="#" class="hover:text-pink-300">About</a>
-            <a href="#" class="hover:text-pink-300">Contact</a>
-            <a href="#" class="hover:text-pink-300">Premium</a>
-            <a href="../Login/Login.html">
-              <button class="bg-[#2d2240] text-white px-4 py-1 rounded-lg hover:bg-pink-400 hover:text-white">Login</button>
-            </a>
-            <a href="../Signup/Signup.html">
-              <button class="bg-pink-400 text-white px-4 py-1 rounded-lg hover:bg-pink-500">Sign Up</button>
-            </a>
-          </nav>
-        </header>
+       <!-- Header -->
+      <header class="flex justify-between items-center py-6 px-10">
+        <input id="searchInput" type="text" placeholder="Search for tracks, artists, albums..." class="rounded-lg px-4 py-2 bg-[#2d2240] text-white w-1/3 focus:outline-none focus:ring-2 focus:ring-pink-400">
+        <nav class="flex gap-8 items-center">
+          <a href="#" class="hover:text-pink-300">About</a>
+          <a href="#" class="hover:text-pink-300">Contact</a>
+          <a href="#" class="hover:text-pink-300">Premium</a>
+          <!-- Avatar user -->
+          <a href="../Account/Account.html" class="inline-block">
+            <img src="./iconamoon_profile-circle-fill.png" class="w-8 h-8 hover:bg-pink-400 rounded-full" title="Tài khoản">
+          </a>
+        </nav>
+      </header>
+      <!-- Main Content -->
+      <section class="px-10 py-8 search-item">
+        <h1 class="text-3xl font-bold mb-4">Chào mừng, <span id="userName"></span>!</h1>
+        <p class="text-lg">Enjoy your melodies</p>
+      </section>
         
         <!-- Music Genres Section -->
         <section class="mb-12 search-item">
