@@ -729,6 +729,30 @@
        </footer>
       </main>
     </div>
+    <!-- Popup player nhạc -->
+    <div id="musicPlayerModal" class="fixed inset-0 z-50 bg-black/60 hidden flex items-center justify-center">
+      <div class="bg-[#23172b] rounded-xl p-6 shadow-xl relative w-96 flex flex-col items-center">
+        <button id="closePlayerBtn" class="absolute top-2 right-2 text-white">&times;</button>
+        <h4 id="playerTitle" class="text-lg font-bold text-white mb-2"></h4>
+        <audio id="audioPlayer" controls class="w-full">
+          <source id="audioSource" src="" type="audio/mpeg">
+          Trình duyệt của bạn không hỗ trợ phát nhạc.
+        </audio>
+      </div>
+    </div>
+    <!-- Popup chia sẻ -->
+    <div id="shareModal" class="fixed inset-0 z-50 bg-black/60 hidden flex items-center justify-center">
+      <div class="bg-[#23172b] rounded-xl p-6 shadow-xl relative w-80 flex flex-col items-center">
+        <button id="closeShareBtn" class="absolute top-2 right-2 text-white">&times;</button>
+        <h4 class="text-lg font-bold text-white mb-2">Chia sẻ</h4>
+        <input id="shareLink" class="w-full px-2 py-1 rounded mb-2 text-black" readonly />
+        <div class="flex gap-3">
+          <button id="copyShareBtn" class="px-3 py-1 bg-pink-400 text-white rounded">Copy Link</button>
+          <a id="fbShareBtn" target="_blank" class="px-3 py-1 bg-blue-600 text-white rounded">Facebook</a>
+          <a id="twShareBtn" target="_blank" class="px-3 py-1 bg-sky-400 text-white rounded">Twitter</a>
+        </div>
+      </div>
+    </div>
     <!-- Splide JS -->
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="Home/Home.js"></script>

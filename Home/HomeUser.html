@@ -8,6 +8,67 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap">
 <!-- Splide CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" />
+  <link rel="stylesheet" href="./spotify-player.css">
+  <style>
+    .heart-outline {
+      fill: none;
+      stroke: #f472b6;
+      stroke-width: 2;
+      transition: fill 0.2s;
+    }
+    .heart-hover:hover .heart-outline {
+      fill: #f472b6;
+    }
+    .play-btn {
+      width: 1.75rem; /* 28px */
+      height: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ec4899; /* Tailwind pink-500 */
+      border-radius: 9999px;
+      transition: background 0.2s;
+      margin-right: 0.5rem;
+      border: none;
+      outline: none;
+      padding: 0;
+      cursor: pointer;
+    }
+    .play-btn:hover {
+      background-color: #db2777; /* Tailwind pink-600 */
+    }
+    .play-btn svg {
+      width: 1rem;
+      height: 1rem;
+      color: #fff;
+    }
+    .play-btn-row {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: #ec4899;
+      border-radius: 9999px;
+      border: none;
+      outline: none;
+      padding: 0;
+      margin-left: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .play-btn-row:hover {
+      background: #db2777;
+    }
+    .flex.gap-2.items-center:hover .play-btn-row {
+      display: flex;
+    }
+    .play-btn-row svg {
+      width: 1rem;
+      height: 1rem;
+      color: #fff;
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-b from-[#22172b] to-[#3d2a3f] min-h-screen text-white font-sans">
   <script>
@@ -68,21 +129,21 @@
         </nav>
       </header>
       <!-- Nội dung chính -->
-      <section class="px-10 py-8 search-item">
+      <section class="px-10 py-8">
         <h1 class="text-3xl font-bold mb-4">Chào mừng, <span id="userName"></span>!</h1>
         <p class="text-lg">Enjoy your melodies</p>
       </section>
       <!-- Billboard (Splide Slider) -->
-      <div class="relative flex justify-center items-center mb-8 search-item">
+      <div class="relative flex justify-center items-center mb-8">
         <div id="billboardSplide" class="splide max-w-4xl mx-auto mb-8">
           <div class="splide__track rounded-xl overflow-hidden h-72">
             <ul class="splide__list">
               <!-- Slide 1 -->
-              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative search-item">
+              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
                 <img src="./billie-eilish.jpg" alt="Billie Eilish" class="absolute inset-0 w-full h-full object-cover opacity-70" />
                 <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
                 <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
-                  <h3 class="text-3xl font-bold mb-4">Billie eilish</h3>
+                  <h3 class="text-3xl font-bold mb-4">Billie Eilish</h3>
                   <p class="text-base mb-6">
                     You can have easy access to every song of billie eilish by just clicking on the
                     <span class="text-pink-400 font-medium">Listen now</span> botton. You can also
@@ -99,7 +160,7 @@
                 </div>
               </li>
               <!-- Slide 2 -->
-              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative search-item">
+              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
                 <img src="adele.jpg" alt="Adele" class="absolute inset-0 w-full h-full object-cover opacity-70" />
                 <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
                 <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
@@ -120,7 +181,7 @@
                 </div>
               </li>
               <!-- Slide 3 -->
-              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative search-item">
+              <li class="splide__slide flex items-center justify-between bg-[#2d2240] relative">
                 <img src="dua lipa.jpg" alt="Dua Lipa" class="absolute inset-0 w-full h-full object-cover opacity-70" />
                 <div class="absolute inset-0 bg-gradient-to-r from-[#23172b]/90 via-[#23172b]/60 to-transparent"></div>
                 <div class="relative z-10 flex flex-col justify-center h-full pl-10 w-2/3">
@@ -149,58 +210,100 @@
       <section class="mb-8">
         <h2 class="text-2xl font-bold mb-3">Weekly Top <span class="text-pink-400">Songs</span></h2>
         <div class="flex space-x-4">
-          <!-- Example song card -->
+          <!-- In your eyes - The Weeknd -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./weeklytopsongimage/Rectangle 17.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Whatever It Takes</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./weeklytopsongimage/The_Weeknd_-_In_Your_Eyes_(Kenny_G_Remix).png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/The Weeknd - In Your Eyes ft. Kenny G (Official Live Performance) - Vevo.mp3"
+                data-title="In Your Eyes" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">ArtistImagne Dragons</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">In Your Eyes</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">The Weeknd</span>
           </div>
+          <!-- Sky Fall - Adele -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./weeklytopsongimage/Rectangle 19.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
+            <div class="relative group">
+              <img src="./weeklytopsongimage/Rectangle 19.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Adele - Skyfall (Official Lyric Video).mp3"
+                data-title="Sky Fall" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
+            </div>
             <div class="flex flex-row items-center w-full justify-between mt-2">
               <span class="text-sm font-semibold">Sky Fall</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
             </div>
             <span class="text-xs text-gray-400 w-full text-left">Adele</span>
           </div>
+          <!-- That So True - Gracie Abrams -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./weeklytopsongimage/Rectangle 21.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Superman</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./weeklytopsongimage/that so true.jpg" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Gracie Abrams - Thats So True (Official Lyric Video).mp3"
+                data-title="That So True" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">Eminiem</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">That So True</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Gracie Abrams</span>
           </div>
+          <!-- Azizam - Ed Sheeran -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./weeklytopsongimage/Rectangle 23.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Softcore</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./weeklytopsongimage/azizam.jpg" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Ed Sheeran - Azizam (Official Music Video).mp3"
+                data-title="Azizam" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">The neighberhood</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">Azizam</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Ed Sheeran</span>
           </div>
+          <!-- Take me back to LA - The Weeknd -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./weeklytopsongimage/Rectangle 25.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover">
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">The Lonliest</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./weeklytopsongimage/take me back to la.png" alt="Song" class="rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/The Weeknd - Take Me Back To LA (Audio).mp3"
+                data-title="Take Me Back To LA" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">Måneskin</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">Take Me Back To LA</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">The Weeknd</span>
           </div>
-          
+          <!-- View All Button -->
           <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
             <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
                 <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
               </svg>
             </button>
             <span class="text-white font-semibold text-base">View All</span>
           </div>
-          
         </div>
       </section>
 
@@ -208,52 +311,90 @@
       <div class="new-release-section mb-8">
         <h2 class="text-2xl font-bold mb-3">New Release <span class="text-pink-400">Songs</span></h2>
         <div class="new-release-row flex space-x-4">
-          <!-- Example new release card -->
+          <!-- Addison Rae - High Fashion -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./newreleasesongs/Rectangle 17.png" alt="Time by Luciano" class="release-img" />
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Time</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./newreleasesongs/High Fashion.avif" alt="Time by Luciano" class="release-img rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Addison Rae - High Fashion (Official Video).mp3" data-title="High Fashion" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">Luciano</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">High Fashion</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Addison Rae</span>
           </div>
+          <!-- Billie Eilish - Birds of a feather -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./newreleasesongs/Rectangle 19.png" alt="112 by jazzek" class="release-img" />
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">112</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./newreleasesongs/Birds of a Feather.webp" alt="112 by jazzek" class="release-img rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Billie Eilish - BIRDS OF A FEATHER (Official Music Video).mp3" data-title="Birds of a Feather" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">jazzek</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">Birds of a Feather</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Billie Eilish</span>
           </div>
+          <!-- Dua Lipa - Illusion -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./newreleasesongs/Rectangle 21.png" alt="We don't care by Kyanu & Dj Gullum" class="release-img" />
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">We don't care</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./newreleasesongs/illusion.png" alt="We don't care by Kyanu & Dj Gullum" class="release-img rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Dua Lipa - Illusion (Official Music Video).mp3" data-title="illusion" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">Kyanu & Dj Gullum</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">illusion</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Dua Lipa</span>
           </div>
+          <!-- Lady Gaga, Bruno Mars - Die With A Smile -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./newreleasesongs/Rectangle 23.png" alt="Who I Am by Alan Walker & Elias" class="release-img" />
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Who I Am</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./newreleasesongs/Die With A Smile.jpg" alt="Die With A Smile by Lady Gaga & Bruno Mars" class="release-img rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Lady Gaga, Bruno Mars - Die With A Smile (Official Music Video).mp3" data-title="Die With A Smile" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">Alan Walker & Elias</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">Die With A Smile</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Lady Gaga & Bruno Mars</span>
           </div>
+          <!-- Sabrina Carpenter - Espresso -->
           <div class="bg-[#2d2240] rounded-lg p-3 w-40 flex flex-col items-center">
-            <img src="./newreleasesongs/Rectangle 25.png" alt="Baixo by XXAnteria" class="release-img" />
-            <div class="flex flex-row items-center w-full justify-between mt-2">
-              <span class="text-sm font-semibold">Baixo</span>
-              <span class="music-icon text-pink-400 ml-2">&#127925;</span>
+            <div class="relative group">
+              <img src="./newreleasesongs/Espresso.jpg" alt="Espresso by Sabrina Carpenter" class="release-img rounded-lg mb-2 w-30 h-30 object-cover aspect-square" />
+              <button class="absolute bottom-3 right-2 bg-purple-500 hover:bg-purple-600 text-white rounded-full w-9 h-9 flex items-center justify-center shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 play-btn"
+                data-src="../Music/Espresso.mp3" data-title="Espresso" title="Nghe nhạc">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </button>
             </div>
-            <span class="text-xs text-gray-400 w-full text-left">XXAnteria</span>
+            <div class="flex flex-row items-center w-full justify-between mt-2">
+              <span class="text-sm font-semibold">Espresso</span>
+            </div>
+            <span class="text-xs text-gray-400 w-full text-left">Sabrina Carpenter</span>
           </div>
           <!-- View All Button -->
           <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
             <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
                 <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
               </svg>
             </button>
@@ -284,14 +425,26 @@
                 <img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 1.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Sorfcore</div>
-              <div class="text-xs text-gray-300">The neighborhood</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Sorfcore</div>
+                <div class="text-xs text-gray-300">The neighborhood</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
+            
             <div class="w-40 text-white">Nov 4, 2023</div>
             <div class="flex-1 text-white">Hard to Imagine the Neighbourhood Ever Changing</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">3:26</span>
             </div>
           </div>
@@ -304,14 +457,25 @@
                 <img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 2.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Skyfall Beats</div>
-              <div class="text-xs text-gray-300">nightmares</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Skyfall Beats</div>
+                <div class="text-xs text-gray-300">nightmares</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">Oct 26, 2023</div>
             <div class="flex-1 text-white">nightmares</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">2:45</span>
             </div>
           </div>
@@ -324,14 +488,25 @@
                 <img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 3.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Greedy</div>
-              <div class="text-xs text-gray-300">tate mcrae</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Greedy</div>
+                <div class="text-xs text-gray-300">tate mcrae</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">Dec 30, 2023</div>
             <div class="flex-1 text-white">Greedy</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">2:11</span>
             </div>
           </div>
@@ -343,14 +518,25 @@
               <div class=""><img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 4.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Lovin On me</div>
-              <div class="text-xs text-gray-300">jack harlow</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Lovin On me</div>
+                <div class="text-xs text-gray-300">jack harlow</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">Dec 30, 2023</div>
             <div class="flex-1 text-white">Lovin On me</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">2:18</span>
             </div>
           </div>
@@ -362,14 +548,25 @@
               <div class=""><img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 5.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">pain the town red</div>
-              <div class="text-xs text-gray-300">Doja Cat</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">pain the town red</div>
+                <div class="text-xs text-gray-300">Doja Cat</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">Dec 29, 2023</div>
             <div class="flex-1 text-white">Paint The Town Red</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">3:51</span>
             </div>
           </div>
@@ -381,14 +578,25 @@
               <div class=""><img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 6.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Dancin On Night</div>
-              <div class="text-xs text-gray-300">Dualipa</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Dancin On Night</div>
+                <div class="text-xs text-gray-300">Dualipa</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">may 27, 2023</div>
             <div class="flex-1 text-white">Dance The Night(From Barbie Movie)</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">2:56</span>
             </div>
           </div>
@@ -400,24 +608,32 @@
               <div class=""><img src="./TrendingSongs/The_Neighbourhood_-_The_Neighbourhood 7.png" alt="Time by Luciano" class="release-img" />
               </div>
             </div>
-            <div class="flex-1">
-              <div class="text-white font-semibold">Water</div>
-              <div class="text-xs text-gray-300">Tyla</div>
+            <div class="flex-1 flex items-center">
+              <div>
+                <div class="text-white font-semibold">Water</div>
+                <div class="text-xs text-gray-300">Tyla</div>
+              </div>
+              <button class="play-btn-row ml-4" title="Play">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M6 4l12 6-12 6V4z"/>
+                </svg>
+              </button>
             </div>
             <div class="w-40 text-white">Dec 10, 2023</div>
             <div class="flex-1 text-white">Water</div>
             <div class="w-24 flex items-center justify-end">
-              <span class="text-pink-400 text-xl mr-2">&#10084;</span>
+              <span class="heart-hover mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                  <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                </svg>
+              </span>
               <span class="text-white">3:20</span>
             </div>
           </div>
-          <!-- View All Button -->
-          <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
-            <button class="flex items-center gap-2 bg-[#232323] hover:bg-pink-500 text-white font-semibold text-lg px-7 py-2 rounded-md shadow transition-all">
-              <span class="text-2xl font-bold">+</span>
-              <span>View All</span>
+          <div class="flex justify-center mt-4 mb-2">
+            <button class="bg-pink-500 hover:bg-pink-400 text-white text-base font-semibold rounded-full shadow-lg transition-all duration-200 focus:outline-none" style="width:102px; height:25px; min-width:102px; min-height:25px;">
+              View All
             </button>
-            <span class="text-white font-semibold text-base"></span>
           </div>
         </div>
       </section>
@@ -718,8 +934,88 @@
      </footer>
     </main>
   </div>
+  <!-- Spotify-like Now Playing Popup Player -->
+<div id="musicPlayerModal" class="hidden fixed left-0 right-0 bottom-0 bg-[#181a2a] shadow-2xl z-50 flex items-center justify-between px-6 py-3 border-t border-[#2d2240]" style="min-width:320px; max-width:100vw;">
+  <!-- Cover Art -->
+  <div class="flex items-center gap-4 min-w-0">
+    <div class="w-14 h-14 rounded-md overflow-hidden bg-gray-700 flex-shrink-0">
+      <img id="playerCover" src="./weeklytopsongimage/Rectangle 17.png" alt="cover" class="w-full h-full object-cover" />
+    </div>
+    <div class="min-w-0">
+      <div id="playerTitle" class="font-semibold truncate text-white text-base leading-tight">Tên bài hát</div>
+      <div id="playerArtist" class="text-xs text-gray-300 truncate">Tên nghệ sĩ</div>
+    </div>
+  </div>
+  <!-- Controls -->
+  <div class="flex justify-between items-center gap-4 mx-6">
+    <div id="customPlayerControls" class="flex flex-col items-center justify-center w-full">
+      <div class="flex items-center justify-center gap-1 md:gap-2 mb-1 md:mb-2" style="height:32px; min-width:0; max-width:457px; width:100%;">
+        <button id="btn-shuffle" class="p-1.5 w-7 h-7 rounded-full hover:bg-[#2d2240] transition flex items-center justify-center active:bg-[#2d2240] aria-pressed:bg-[#2d2240]" title="Shuffle" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" width="18" height="18" class="text-white">
+            <path d="M4 19h4.586a1 1 0 0 0 .707-.293l9.414-9.414M15 5h5v5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 5h4.586a1 1 0 0 1 .707.293l9.414 9.414M15 19h5v-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button id="btn-prev" class="p-1.5 w-7 h-7 rounded-full hover:bg-[#2d2240] transition flex items-center justify-center" title="Previous">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="18" height="18" class="text-white">
+            <path d="M11.5 2.5v11a1 1 0 0 1-1.555.832l-6.5-5.5a1 1 0 1 1 0-1.664l6.5-5.5A1 1 0 0 1 11.5 2.5z"/>
+          </svg>
+        </button>
+        <button id="btn-playpause" class="p-2 w-8 h-8 rounded-full bg-white text-black mx-1 md:mx-2 shadow-lg hover:scale-105 transition flex items-center justify-center" title="Play/Pause">
+          <svg id="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="22" height="22"><path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z" fill="currentColor"></path></svg>
+          <svg id="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="22" height="22" style="display:none"><rect x="3" y="2" width="3" height="12" rx="1" fill="currentColor"/><rect x="10" y="2" width="3" height="12" rx="1" fill="currentColor"/></svg>
+        </button>
+        <button id="btn-next" class="p-1.5 w-7 h-7 rounded-full hover:bg-[#2d2240] transition flex items-center justify-center" title="Next">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="18" height="18" class="text-white">
+            <path d="M4.5 2.5v11a1 1 0 0 0 1.555.832l6.5-5.5a1 1 0 0 0 0-1.664l-6.5-5.5A1 1 0 0 0 4.5 2.5z"/>
+          </svg>
+        </button>
+        <button id="btn-repeat" class="p-1.5 w-7 h-7 rounded-full hover:bg-[#2d2240] transition flex items-center justify-center active:bg-[#2d2240] aria-pressed:bg-[#2d2240]" title="Repeat" aria-pressed="false">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="18" height="18" class="text-white">
+            <path d="M17 1a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V4.41A9 9 0 1 0 21 12a1 1 0 1 1 2 0A11 11 0 1 1 12 1h5zm-5 4a7 7 0 1 1-7 7 1 1 0 1 1 2 0 5 5 0 1 0 5-5z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="flex items-center w-full mt-0 mb-1 gap-2">
+        <span id="currentTime" class="text-xs text-gray-400 min-w-[36px]">0:00</span>
+        <input type="range" id="progressBar" min="0" max="100" value="0" class="flex-1 h-1 accent-pink-400 bg-gray-700 rounded-lg" />
+        <span id="duration" class="text-xs text-gray-400 min-w-[36px]">0:00</span>
+        <!-- Volume control nằm ngang hàng, sát phải -->
+        <div class="flex items-center gap-1 ml-2 min-w-[120px] max-w-[180px] w-[18%] justify-end">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="20" height="20" class="text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5L6 9H2v6h4l5 4V5z" /></svg>
+          <input type="range" id="volumeBar" min="0" max="1" step="0.01" value="1" class="h-1 accent-pink-400 bg-gray-700 rounded-lg w-full" />
+        </div>
+      </div>
+    </div>
+    <audio id="audioPlayer" class="w-full hidden"></audio>
+  </div>
+  <!-- Actions -->
+  <div class="flex flex-col items-center gap-2">
+    <button id="closePlayerBtn" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-[#2d2240] transition" title="Đóng">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+  </div>
+</div>
   <!-- Splide JS -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="Home.js"></script>
+<script>
+// Hiệu ứng giữ trạng thái hover cho shuffle/repeat khi click
+function toggleActive(btn) {
+  const pressed = btn.getAttribute('aria-pressed') === 'true';
+  btn.setAttribute('aria-pressed', !pressed);
+  if (!pressed) {
+    btn.classList.add('bg-[#2d2240]');
+  } else {
+    btn.classList.remove('bg-[#2d2240]');
+  }
+}
+document.getElementById('btn-shuffle').addEventListener('click', function() {
+  toggleActive(this);
+});
+document.getElementById('btn-repeat').addEventListener('click', function() {
+  toggleActive(this);
+});
+</script>
 </body>
 </html>

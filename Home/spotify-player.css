@@ -1,0 +1,47 @@
+/* Spotify-like Player Controls */
+.spotify-btn {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+.spotify-btn:hover, .spotify-btn.active {
+  background: #23272e;
+  color: #1ed760;
+}
+.spotify-btn-main {
+  background: #fff;
+  color: #181a2a;
+  box-shadow: 0 2px 8px #0002;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+  border: 2.5px solid #181a2a;
+  z-index: 2;
+}
+.spotify-btn-main:hover {
+  background: #1ed760;
+  color: #fff;
+  border-color: #1ed760;
+}
+#progressBar {
+  accent-color: #1ed760;
+}
+#volumeBar {
+  accent-color: #1ed760;
+}
+#currentTime, #duration {
+  font-family: 'Montserrat', Arial, sans-serif;
+  color: #b3b3b3;
+  font-size: 13px;
+}
