@@ -54,27 +54,58 @@ window.addEventListener('DOMContentLoaded', function () {
   if(userNameEl) {
     userNameEl.textContent = user.name || 'User';
   }
-});
 
-// Chức năng tìm kiếm: Ẩn các phần không khớp trên index.html
-window.addEventListener('DOMContentLoaded', function () {
-  const searchInput = document.getElementById('searchInput');
-  if (!searchInput) return;
+  // ====== MULTI-SECTION SEARCH ======
+  var searchInput = document.querySelector('input[placeholder="Search for tracks, artists, albums..."]');
+  var searchSections = [
+    'weeklyTopSongsList', 
+    'newReleaseSongsList', 
+    'trendingSongsList',
+    'popularArtistsList',
+    'musicVideoList',
+    'topAlbumsList',
+    'moodPlaylistsList'
+  ];
 
-  searchInput.addEventListener('input', function() {
-    const keyword = this.value.trim().toLowerCase();
-    const items = document.querySelectorAll('.search-item');
-    items.forEach(item => {
-      // Ghép toàn bộ text của item (bao gồm cả con)
-      const text = item.textContent.toLowerCase();
-      if (!keyword || text.includes(keyword)) {
-        item.style.display = '';
-      } else {
-        item.style.display = 'none';
-      }
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      var filter = this.value.toLowerCase();
+      
+      searchSections.forEach(function(sectionId) {
+        var section = document.getElementById(sectionId);
+        if (section) {
+          var items = section.querySelectorAll('.search-item');
+          var visibleItemsCount = 0;
+          
+          items.forEach(function(item) {
+            var text = item.textContent.toLowerCase();
+            var isVisible = text.includes(filter);
+            item.style.display = isVisible ? '' : 'none';
+            
+            if (isVisible) visibleItemsCount++;
+          });
+          
+          // Ẩn/hiện toàn bộ section
+          var sectionTitle = section.querySelector('h2');
+          var viewAllButton = section.querySelector('.flex-col.items-center.justify-center');
+          
+          if (sectionTitle) {
+            sectionTitle.style.display = visibleItemsCount > 0 ? '' : 'none';
+          }
+          
+          if (viewAllButton) {
+            viewAllButton.style.display = visibleItemsCount > 0 ? '' : 'none';
+          }
+          
+          section.style.display = visibleItemsCount > 0 ? '' : 'none';
+        }
+      });
     });
-  });
+  }
+
 });
+
+
 
 // ====== MUSIC PLAYER & SHARE FUNCTIONALITY ======
 window.addEventListener('DOMContentLoaded', function () {
