@@ -49,7 +49,7 @@
                    <div class="mb-2">
                        <div class="text-xs text-gray-400 mb-1">General</div>
                        <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⚙️</span> Setting</a>
-                       <a href="../Login/Login.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>></span> Login</a>
+                       <button onclick="localStorage.removeItem('currentUser'); window.location.href='./discover.html';" class="flex items-center gap-2 py-2 px-3 rounded-lg text-pink-400 hover:bg-[#2d2240] w-full text-left"><span>⏻</span> Logout</button>
                    </div> 
                </nav>
            </aside>

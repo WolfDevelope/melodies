@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Melodies - Eminem</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .heart-outline {
+      fill: none;
+      stroke: #f472b6;
+      stroke-width: 2;
+      transition: fill 0.2s;
+    }
+    .heart-hover:hover .heart-outline {
+      fill: #f472b6;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#22172b] to-[#3d2a3f] min-h-screen text-white font-sans">
+    <script>
+        // Kiểm tra trạng thái đăng nhập
+        const currentUser = localStorage.getItem('currentUser');
+        if (!currentUser) {
+          window.location.href = '../Login/Login.html';
+        }
+      </script>
+  <!-- Sidebar -->
+  <div class="flex" style="margin-left: 16rem;">
+    <aside class="w-64 bg-[#181a2a] flex flex-col py-6 px-4 fixed top-0 left-0 h-full z-30">
+      <div class="text-3xl font-extrabold bg-gradient-to-r from-pink-500 to-sky-400 bg-clip-text text-transparent mb-8">Melodies</div>
+       <nav class="flex  flex-col gap-2 text-white">
+       <!-- Menu group -->
+       <div class="mb-2">
+                   <div class="text-xs text-gray-400 mb-1">Menu</div>
+                   <a href="../Home/HomeUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  font-semibold"><span>🏠</span> Home</a>
+                   <a href="../Discover/DiscoverUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240] font-semibold"><span>🔍</span> Discover</a>
+                   <a href="../Album/AlbumUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]font-semibold"><span>💿</span> Albums</a>
+                   <a href="../Artists/ArtistsUser.html" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]  border border-pink-400 font-semibold"><span>👤</span> Artists</a>
+                   </div>
+                   <!-- Library group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">Library</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>🕒</span> Recently Added</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>▶️</span> Most played</a>
+                   </div>
+                   <!-- Playlist and favorite group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">Playlist and favorite</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⭐</span> Your favorites</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>🎵</span> Your playlist</a>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span class="text-pink-400">＋</span> Add playlist</a>
+                   </div>
+                   <!-- General group -->
+                   <div class="mb-2">
+                       <div class="text-xs text-gray-400 mb-1">General</div>
+                       <a href="#" class="flex items-center gap-2 py-2 px-3 rounded-lg hover:bg-[#2d2240]"><span>⚙️</span> Setting</a>
+                       <!-- Nút logout -->
+                       <button onclick="localStorage.removeItem('currentUser'); window.location.href='../index.html';" class="flex items-center gap-2 py-2 px-3 rounded-lg text-pink-400 hover:bg-[#2d2240] w-full text-left"><span>⏻</span> Logout</button>
+                   </div> 
+               </nav>
+           </aside>
+  
+      <!-- Main Content -->
+      <main class="flex-1 px-8 py-6">
+        <!-- Artist Header Section -->
+<section class="bg-[#2d2230] rounded-xl p-0 shadow-lg max-w-[1240px] w-full mx-auto mb-10 relative overflow-hidden" style="height:422px; min-height:422px;">
+    <!-- Background image layer: tự thêm bằng CSS hoặc <img> nếu muốn -->
+    <div class="absolute inset-0 w-full h-full bg-black/60 z-0">
+        <img src="Rectangle 37.png" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 flex flex-row items-start justify-between h-full p-10">
+      <!-- Back Arrow -->
+      <button class="mr-4 mt-1 flex-shrink-0">
+        <a href="./ArtistsUser.html">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white hover:text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+        </a>
+      </button>
+      <!-- Main Content -->
+      <div class="flex-1 flex flex-col justify-end h-full">
+        <span class="text-5xl md:text-7xl font-extrabold text-white drop-shadow-lg mb-2">Eminem</span>
+      </div>
+      <!-- Top Right Controls -->
+      <div class="flex flex-col items-end gap-3 min-w-[170px] mt-2">
+        <div class="flex gap-4 text-sm text-white">
+          <a href="#" class="hover:text-pink-400">Share</a>
+          <a href="#" class="hover:text-pink-400">About</a>
+          <a href="#" class="hover:text-pink-400">Premuim</a>
+          <span class="inline-block">
+            <a href="../Account/Account.html">
+              <img src="./iconamoon_profile-circle-fill.png" class="w-6 h-6 hover:bg-pink-400 rounded-full">
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Songs Table -->
+  <section class="max-w-[1076px] w-full mx-auto mb-10 ">
+    <h2 class="text-3xl font-bold text-white mb-4">Popular</h2>
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left text-white">
+        <thead>
+          <tr class="border-b border-gray-700 text-base">
+            <th class="py-3 pr-2 pl-6 font-bold">&nbsp;</th>
+            <th class="py-3 pr-2 font-bold">&nbsp;</th>
+            <th class="py-3 pr-2 font-bold">Release Date</th>
+            <th class="py-3 pr-2 font-bold">Played</th>
+            <th class="py-3 pr-2 font-bold">Time</th>
+            <th class="py-3 pr-6 font-bold">&nbsp;</th>
+          </tr>
+        </thead>
+        <tbody class=" divide-y divide-[#232323]">
+          <!-- Song 1 -->
+          <tr class="bg-[#232323] hover:bg-[#31223a] transition group">
+            <td class="py-2 pr-2 pl-6 align-middle font-bold text-2xl w-6">1</td>
+            <td class="py-2 pr-2 align-middle">
+              <div class="flex items-center gap-3">
+                <img src="popularsongtable/withoutme.png" class="w-16 h-16 bg-[#111]/30 rounded-md overflow-hidden flex-shrink-0">
+                <div>
+                  <div class="font-bold text-lg leading-tight">Without Me</div>
+                  <div class="text-xs text-gray-300">Eminem</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-2 pr-2 align-middle text-gray-200">May 15, 2002</td>
+            <td class="py-2 pr-2 align-middle text-gray-200">21,215,618</td>
+            <td class="py-2 pr-2 pl-2 align-middle text-gray-200">
+              <div class="flex items-center gap-2 h-full">
+                <span class="heart-hover">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                  </svg>
+                </span>
+                <span class="align-middle">4:50</span>
+              </div>
+            </td>
+            <td class="py-2 pr-6 align-middle text-right text-gray-400">...</td>
+          </tr>
+          <!-- Song 2 -->
+          <tr class="bg-[#232323] hover:bg-[#31223a] transition group">
+            <td class="py-2 pr-2 pl-6 align-middle font-bold text-2xl w-6">2</td>
+            <td class="py-2 pr-2 align-middle">
+              <div class="flex items-center gap-3">
+                <img src="popularsongtable/mockingbird.png" class="w-16 h-16 bg-[#111]/30 rounded-md overflow-hidden flex-shrink-0">
+                <div>
+                  <div class="font-bold text-lg leading-tight">mockingbird</div>
+                  <div class="text-xs text-gray-300">Eminem</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-2 pr-2 align-middle text-gray-200">Apr 25, 2005</td>
+            <td class="py-2 pr-2 align-middle text-gray-200">19,856,112</td>
+            <td class="py-2 pr-2 pl-2 align-middle text-gray-200">
+              <div class="flex items-center gap-2 h-full">
+                <span class="heart-hover">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                  </svg>
+                </span>
+                <span class="align-middle">4:10</span>
+              </div>
+            </td>
+            <td class="py-2 pr-6 align-middle text-right text-gray-400">...</td>
+          </tr>
+          <!-- Song 3 -->
+          <tr class="bg-[#232323] hover:bg-[#31223a] transition group">
+            <td class="py-2 pr-2 pl-6 align-middle font-bold text-2xl w-6">3</td>
+            <td class="py-2 pr-2 align-middle">
+              <div class="flex items-center gap-3">
+                <img src="popularsongtable/thereal.png" class="w-16 h-16 bg-[#111]/30 rounded-md overflow-hidden flex-shrink-0">
+                <div>
+                  <div class="font-bold text-lg leading-tight">The Real Slim Sha..</div>
+                  <div class="text-xs text-gray-300">Eminem</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-2 pr-2 align-middle text-gray-200">Nov 30, 2023</td>
+            <td class="py-2 pr-2 align-middle text-gray-200">16,564,223</td>
+            <td class="py-2 pr-2 pl-2 align-middle text-gray-200">
+              <div class="flex items-center gap-2 h-full">
+                <span class="heart-hover">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                  </svg>
+                </span>
+                <span class="align-middle">4:44</span>
+              </div>
+            </td>
+            <td class="py-2 pr-6 align-middle text-right text-gray-400">...</td>
+          </tr>
+          <!-- Song 4 -->
+          <tr class="bg-[#232323] hover:bg-[#31223a] transition group">
+            <td class="py-2 pr-2 pl-6 align-middle font-bold text-2xl w-6">4</td>
+            <td class="py-2 pr-2 align-middle">
+              <div class="flex items-center gap-3">
+                <img src="popularsongtable/loseyourself.png" class="w-16 h-16 bg-[#111]/30 rounded-md overflow-hidden flex-shrink-0">
+                <div>
+                  <div class="font-bold text-lg leading-tight">Lose Yourself</div>
+                  <div class="text-xs text-gray-300">Eminem</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-2 pr-2 align-middle text-gray-200">Nov 30, 2023</td>
+            <td class="py-2 pr-2 align-middle text-gray-200">16,240,390</td>
+            <td class="py-2 pr-2 pl-2 align-middle text-gray-200">
+              <div class="flex items-center gap-2 h-full">
+                <span class="heart-hover">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                  </svg>
+                </span>
+                <span class="align-middle">5:22</span>
+              </div>
+            </td>
+            <td class="py-2 pr-6 align-middle text-right text-gray-400">...</td>
+          </tr>
+          <!-- Song 5 -->
+          <tr class="bg-[#232323] hover:bg-[#31223a] transition group">
+            <td class="py-2 pr-2 pl-6 align-middle font-bold text-2xl w-6">5</td>
+            <td class="py-2 pr-2 align-middle">
+              <div class="flex items-center gap-3">
+                <img src="popularsongtable/godzila.png" class="w-16 h-16 bg-[#111]/30 rounded-md overflow-hidden flex-shrink-0">
+                <div>
+                  <div class="font-bold text-lg leading-tight">Godzila</div>
+                  <div class="text-xs text-gray-300">Eminem</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-2 pr-2 align-middle text-gray-200">Nov 30, 2023</td>
+            <td class="py-2 pr-2 align-middle text-gray-200">14,367,500</td>
+            <td class="py-2 pr-2 pl-2 align-middle text-gray-200">
+              <div class="flex items-center gap-2 h-full">
+                <span class="heart-hover">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path class="heart-outline" d="M12.1 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54l-1.35 1.31z"/>
+                  </svg>
+                </span>
+                <span class="align-middle">3:30</span>
+              </div>
+            </td>
+            <td class="py-2 pr-6 align-middle text-right text-gray-400">...</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flex justify-center mt-4 mb-2">
+      <button class="bg-pink-500 hover:bg-pink-400 text-white text-base font-semibold rounded-full shadow-lg transition-all duration-200 focus:outline-none" style="width:102px; height:25px; min-width:102px; min-height:25px;">
+        Show All
+      </button>
+    </div>
+  </section>
+
+  <!-- Artist's Albums Section -->
+  <section class="max-w-[1076px] w-full mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-white mb-6">
+      Artist's <span class="text-sky-400">Albums</span>
+    </h2>
+    <div class="flex flex-row items-center gap-6 pb-2 w-full max-w-[1076px] mx-auto">
+      <!-- Album Card 1 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./artistsalbum/theeminemshow.png" class="w-full h-full object-cover rounded-t-xl">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">The Eminem Show</div>
+          <div class="text-gray-400 text-sm">2002</div>
+        </div>
+      </div>
+      <!-- Album Card 2 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./artistsalbum/encore.png" class="w-full h-full object-cover rounded-t-xl">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Encore</div>
+          <div class="text-gray-400 text-sm">2004</div>
+        </div>
+      </div>
+      <!-- Album Card 3 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./artistsalbum/musictobemrder....png" class="w-full h-full object-cover rounded-t-xl">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Music To be Mrder...</div>
+          <div class="text-gray-400 text-sm">2020</div>
+        </div>
+      </div>
+      <!-- Album Card 4 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./artistsalbum/recovery.png" class="w-full h-full object-cover rounded-t-xl">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Recovery</div>
+          <div class="text-gray-400 text-sm">2010</div>
+        </div>
+      </div>
+      <!-- Album Card 5 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./artistsalbum/eminemtheslim....png" class="w-full h-full object-cover rounded-t-xl">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Eminem The Slim ...</div>
+          <div class="text-gray-400 text-sm">1999</div>
+        </div>
+      </div>
+      <!-- View All Card -->
+      <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+        <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+          </svg>
+        </button>
+        <span class="text-white font-semibold text-base">View All</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Single Songs Section -->
+  <section class="max-w-[1076px] w-full mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-white mb-6">
+      Single <span class="text-pink-500">Songs</span>
+    </h2>
+    <div class="flex flex-row items-center gap-6 pb-2 w-full max-w-[1076px] mx-auto">
+      <!-- Song Card 1 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./singlesong/Lace It.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Lace It</div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="text-gray-400 text-sm">2023</div>
+            <div><span class="text-pink-400 text-xl">&#127925;</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Song Card 2 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./singlesong/releast.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">realest</div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="text-gray-400 text-sm">2022</div>
+            <div><span class="text-pink-400 text-xl">&#127925;</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Song Card 3 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./singlesong/Fromthed2thelbc.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">From the D 2 the LBC</div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="text-gray-400 text-sm">2023</div>
+            <div><span class="text-pink-400 text-xl">&#127925;</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Song Card 4 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./singlesong/911.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">911</div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="text-gray-400 text-sm">2022</div>
+            <div><span class="text-pink-400 text-xl">&#127925;</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- Song Card 5 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <img src="./singlesong/Killshot.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Killshot</div>
+          <div class="flex justify-between items-center mt-2">
+            <div class="text-gray-400 text-sm">2018</div>
+            <div><span class="text-pink-400 text-xl">&#127925;</span></div>
+          </div>
+        </div>
+      </div>
+      <!-- View All Card -->
+      <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+        <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+          </svg>
+        </button>
+        <span class="text-white font-semibold text-base">View All</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artist's Playlist Section -->
+  <section class="max-w-[1076px] w-full mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-white mb-6">
+      Artist's <span class="text-pink-500">Playlist</span>
+    </h2>
+    <div class="flex flex-row items-center gap-6 pb-2 w-full max-w-[1076px] mx-auto">
+      <!-- Playlist Card 1 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <!-- Playlist Image Here -->
+          <img src="./artistplaylists/fullcollection.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Full Collection</div>
+          <div class="flex justify-end mt-2"><span class="text-pink-400 text-xl">&#127911;</span></div>
+        </div>
+      </div>
+      <!-- Playlist Card 2 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <!-- Playlist Image Here -->
+          <img src="./artistplaylists/bestoffeminem.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Best Of Eminem</div>
+          <div class="flex justify-end mt-2"><span class="text-pink-400 text-xl">&#127911;</span></div>
+        </div>
+      </div>
+      <!-- Playlist Card 3 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <!-- Playlist Image Here -->
+          <img src="./artistplaylists/oldsongs.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Old Songs</div>
+          <div class="flex justify-end mt-2"><span class="text-pink-400 text-xl">&#127911;</span></div>
+        </div>
+      </div>
+      <!-- Playlist Card 4 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <!-- Playlist Image Here -->
+          <img src="./artistplaylists/fanfavorite.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">Fan's Favorite</div>
+          <div class="flex justify-end mt-2"><span class="text-pink-400 text-xl">&#127911;</span></div>
+        </div>
+      </div>
+      <!-- Playlist Card 5 -->
+      <div class="bg-[#232323] rounded-xl w-48 flex-shrink-0 shadow-md">
+        <div class="w-full h-48 bg-gray-700 rounded-t-xl flex items-center justify-center">
+          <!-- Playlist Image Here -->
+          <img src="./artistplaylists/newrelease.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="px-4 py-3">
+          <div class="font-bold text-base text-white truncate">New Release So...</div>
+          <div class="flex justify-end mt-2"><span class="text-pink-400 text-xl">&#127911;</span></div>
+        </div>
+      </div>
+      <!-- View All Card -->
+      <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+        <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+          </svg>
+        </button>
+        <span class="text-white font-semibold text-base">View All</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eminem Fans Also Listen To Section -->
+  <section class="max-w-[1076px] w-full mx-auto mb-12">
+    <h2 class="text-3xl font-bold text-white mb-8">
+      Eminem Fans <span class="text-pink-500">Also Listen To</span>
+    </h2>
+    <div class="flex flex-row items-center gap-10 pb-2 w-full max-w-[1076px] mx-auto">
+      <!-- Artist 1 -->
+      <div class="flex flex-col items-center">
+        <div class="w-44 h-44 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+          <!-- Artist Image Here -->
+           <img src="./alsolisten/50cent.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="mt-4 text-white text-lg font-semibold">50 Cent</div>
+      </div>
+      <!-- Artist 2 -->
+      <div class="flex flex-col items-center">
+        <div class="w-44 h-44 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+          <!-- Artist Image Here -->
+           <img src="./alsolisten/snoopdog.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="mt-4 text-white text-lg font-semibold">Snoop Dog</div>
+      </div>
+      <!-- Artist 3 -->
+      <div class="flex flex-col items-center">
+        <div class="w-44 h-44 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+          <!-- Artist Image Here -->
+           <img src="./alsolisten/tupac.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="mt-4 text-white text-lg font-semibold">Tupac</div>
+      </div>
+      <!-- Artist 4 -->
+      <div class="flex flex-col items-center">
+        <div class="w-44 h-44 bg-gray-700 rounded-full flex items-center justify-center overflow-hidden">
+          <!-- Artist Image Here -->
+           <img src="./alsolisten/jayz.png" class="w-full h-full object-cover ">
+        </div>
+        <div class="mt-4 text-white text-lg font-semibold">Jay-z</div>
+      </div>
+      <!-- View All Card -->
+      <div class="flex flex-col items-center justify-center ml-2 flex-shrink-0">
+        <button class="w-14 h-14 bg-[#232323] rounded-full flex items-center justify-center shadow-lg mb-2 hover:bg-pink-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+            <path stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 8v8m-4-4h8"/>
+          </svg>
+        </button>
+        <span class="text-white font-semibold text-base">View All</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#432f3c] w-full p-10 text-white mt-8 text-base">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-start gap-8">
+      <!-- About -->
+      <div class="flex-1 min-w-[260px] max-w-[350px]">
+        <h2 class="text-3xl font-extrabold mb-2">About</h2>
+        <p class="font-semibold mb-2 text-gray-100">
+          Melodies is a website that has been created for over 
+          <span class="text-pink-400">5 year's</span> now and it is one of the most famous music player website’s in the world. in this website you can listen and download songs for free. also of you want no limitation you can buy our 
+          <a class="text-sky-400 underline font-bold" href="#">premium pass's.</a>
+        </p>
+      </div>
+      <!-- Melodi -->
+      <div class="flex-1 min-w-[150px]">
+        <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Melodi</h3>
+        <ul class="mt-2 space-y-1 font-bold">
+          <li>Songs</li>
+          <li>Radio</li>
+          <li>Podcast</li>
+        </ul>
+      </div>
+      <!-- Access -->
+      <div class="flex-1 min-w-[180px]">
+        <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Access</h3>
+        <ul class="mt-2 space-y-1 font-bold">
+          <li>Explor</li>
+          <li>Artists</li>
+          <li>Playlists</li>
+          <li>Albums</li>
+          <li>Trending</li>
+        </ul>
+      </div>
+      <!-- Contact -->
+      <div class="flex-1 min-w-[180px]">
+        <h3 class="text-2xl font-extrabold mb-1 border-b-2 border-white w-fit pb-1">Contact</h3>
+        <ul class="mt-2 space-y-1 font-bold">
+          <li>About</li>
+          <li>Policy</li>
+          <li>Social Media</li>
+          <li>Soppurt</li>
+        </ul>
+      </div>
+      <!-- Logo -->
+      <div class="flex flex-col justify-between">
+        <div class="flex items-center min-w-[160px]">
+        <span class="text-3xl font-extrabold bg-gradient-to-r from-pink-500 to-sky-400 bg-clip-text text-transparent">Melodies</span>
+        </div>  
+      
+        <div class="flex gap-3 mt-4 text-2xl">
+          <!-- Replace these with FontAwesome or your icon set -->
+           <img src="./Logo/fluent_call-28-regular.png" class="inline-block w-8 h-8  flex items-center justify-center">
+           <img src="./Logo/Group.png" class="inline-block w-8 h-8 flex items-center justify-center">
+           <img src="./Logo/streamline_computer-logo-twitter-media-twitter-social.png" class="inline-block w-8 h-8 flex items-center justify-center">
+           <img src="./Logo/Vector.png" class="inline-block w-8 h-8 flex items-center justify-center">
+        </div>
+      </div>
+    </div>
+    
+  </div>
+ </footer>
+</main>
+</div>
+</body>
+<script src="../Home/Home.js"></script>
+</html>
