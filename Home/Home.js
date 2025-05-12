@@ -64,7 +64,23 @@ window.addEventListener('DOMContentLoaded', function () {
     'popularArtistsList',
     'musicVideoList',
     'topAlbumsList',
-    'moodPlaylistsList'
+    'moodPlaylistsList',
+    'musicGenresSection',
+    'moodPlaylistsSection',
+    'popularArtistsList',
+    'musicVideoList',
+    'newReleaseSongsList',
+    'newAlbumsList',
+    'topAlbumsList',
+    'new-release-albums',
+    'popular-albums',
+    'mix-albums',
+    'popularArtistsList',
+    'emerging-pop-artists',
+    'rising-alternative-indie-artists',
+    'recently-viral-artists',
+
+
   ];
 
   if (searchInput) {
